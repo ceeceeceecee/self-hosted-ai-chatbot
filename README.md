@@ -86,17 +86,10 @@ self-hosted-ai-chatbot/
 
 ## 📸 Screenshots
 
-![Repo Übersicht](screenshots/repo-overview.png)
-*Übersicht des Self-Hosted AI Chatbot Repos*
+### System-Architektur
 
-![Docker Compose Übersicht](screenshots/docker-overview.png)
-*Docker Compose Konfiguration mit allen Diensten*
-
-![Setup Script](screenshots/setup-script.png)
-*Automatisiertes Setup-Skript für schnelle Installation*
-
-![Architektur](screenshots/architecture.png)
-*Systemarchitektur mit Ollama, Open WebUI und optionalen Services*
+![System-Architektur](screenshots/chatbot-architecture.png)
+*Docker-Stack mit Nginx, Open WebUI, Ollama und Redis — alles in einem docker-compose.yml*
 
 ## 🗺️ Roadmap
 
