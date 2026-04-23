@@ -84,6 +84,20 @@ self-hosted-ai-chatbot/
 - **Reverse Proxy:** Nginx-Konfiguration mit SSL-Ready-Setup
 - **Anpassbar:** Eigene System-Prompts, Branding, Modelle
 
+## 📸 Screenshots
+
+![Repo Übersicht](screenshots/repo-overview.png)
+*Übersicht des Self-Hosted AI Chatbot Repos*
+
+![Docker Compose Übersicht](screenshots/docker-overview.png)
+*Docker Compose Konfiguration mit allen Diensten*
+
+![Setup Script](screenshots/setup-script.png)
+*Automatisiertes Setup-Skript für schnelle Installation*
+
+![Architektur](screenshots/architecture.png)
+*Systemarchitektur mit Ollama, Open WebUI und optionalen Services*
+
 ## 🗺️ Roadmap
 
 - [ ] RAG (Retrieval-Augmented Generation) mit PDF-Upload
