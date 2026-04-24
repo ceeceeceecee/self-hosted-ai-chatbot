@@ -128,6 +128,10 @@ Siehe [docs/models.md](docs/models.md) für Details.
 
 ---
 
+
+## 👤 Autor
+
+**Cela** — Freelancer für digitale Verwaltungslösungen
 ## Lizenz
 
 [MIT](LICENSE) — frei nutzbar.
