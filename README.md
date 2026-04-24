@@ -43,21 +43,32 @@ GDPR-compliant AI chatbot with Docker + Ollama — no cloud dependency, full dat
 
 ---
 
-## Quick Start (3 Befehle)
+## 🚀 Schnellstart
+
+### Voraussetzungen
+
+| Komponente | Version | Zweck |
+|---|---|---|
+| Docker & Docker Compose | 20.10+ / 2.0+ | Container-Stack |
+| RAM | 8 GB+ | LLM-Inferenz (min. für 8B Modelle) |
+| GPU (optional) | NVIDIA 4+ GB VRAM | Beschleunigte Inferenz |
+
+### Installation
 
 ```bash
 git clone https://github.com/ceeceeceecee/self-hosted-ai-chatbot.git
 cd self-hosted-ai-chatbot
+
+# Konfiguration & Start
 cp .env.example .env && docker compose up -d
 ```
 
-Dann: `http://localhost:3000` öffnen und loslegen.
+### Erste Schritte
 
-### GPU-Variante (NVIDIA)
-
-```bash
-docker compose -f docker-compose.gpu.yml up -d
-```
+1. **Open WebUI öffnen:** [http://localhost:3000](http://localhost:3000) und Account anlegen
+2. **Modell auswählen** — Standard: Llama 3.1 8B (8 GB RAM)
+3. **GPU-Variante (optional):** `docker compose -f docker-compose.gpu.yml up -d`
+4. **Chat starten** und Modell bei Bedarf in den Einstellungen wechseln
 
 ---
 
