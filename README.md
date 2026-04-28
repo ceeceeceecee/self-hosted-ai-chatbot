@@ -1,7 +1,6 @@
 # Self Hosted Ai Chatbot
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/ceeceeceecee/ai-document-analyzer/main/docs/coletrading-banner.svg" alt="ColeTrading" width="600">
 </p>
 
 ![Ollama](https://img.shields.io/badge/Ollama-LLM Runtime-000000?logo=ollama) ![Open WebUI](https://img.shields.io/badge/Open WebUI-Chat UI-6B46C1) ![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker) ![License](https://img.shields.io/badge/License-MIT-blue) ![DSGVO](https://img.shields.io/badge/DSGVO-Konform-brightgreen)
@@ -70,5 +69,4 @@ Beiträge sind willkommen! Bitte erstelle einen Issue oder Pull Request.
 MIT License — siehe [LICENSE](LICENSE).
 
 <p align="center">
-<a href="https://github.com/ceeceeceecee">ColeTrading</a> &bull; DSGVO-konform &bull; Self-Hosted &bull; Open Source
 </p>
