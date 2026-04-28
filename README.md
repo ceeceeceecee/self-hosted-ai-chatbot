@@ -1,146 +1,74 @@
-# Self-Hosted AI Chatbot
+# Self Hosted Ai Chatbot
 
-[![Ollama](https://img.shields.io/badge/Ollama-LLM%20Runtime-000000?logo=ollama)](https://ollama.ai)
-[![Open WebUI](https://img.shields.io/badge/Open%20WebUI-Chat%20Interface-6B46C1)](https://github.com/open-webui/open-webui)
-[![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker)](https://www.docker.com)
-[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
-[![DSGVO](https://img.shields.io/badge/DSGVO-konform-brightgreen)]()
+<p align="center">
+<img src="https://raw.githubusercontent.com/ceeceeceecee/ai-document-analyzer/main/docs/coletrading-banner.svg" alt="ColeTrading" width="600">
+</p>
 
-> DSGVO-konformer KI-Chatbot mit Docker + Ollama — keine Cloud-Abhängigkeit, volle Kontrolle über deine Daten.
+![Ollama](https://img.shields.io/badge/Ollama-LLM Runtime-000000?logo=ollama) ![Open WebUI](https://img.shields.io/badge/Open WebUI-Chat UI-6B46C1) ![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker) ![License](https://img.shields.io/badge/License-MIT-blue) ![DSGVO](https://img.shields.io/badge/DSGVO-Konform-brightgreen)
 
-GDPR-compliant AI chatbot with Docker + Ollama — no cloud dependency, full data control.
+> Selbstgehosteter KI-Chatbot mit Open WebUI und Ollama (DSGVO-konform)
 
----
+## Overview
 
-## Screenshots
+Komplett-Lösung für einen selbstgehosteten KI-Chatbot. Kombiniert Ollama (LLM-Runtime) mit Open WebUI (Chat-Interface) und Nginx (Reverse Proxy). DSGVO-konform, kein Cloud-Bezug.
 
-### Docker Setup
+## Features
 
-![Docker Overview](screenshots/docker-overview.png)
-*Alle Services als Docker Compose Stack — Nginx, Open WebUI, Ollama, Redis.*
-
-### Architektur
-
-![Architecture](screenshots/chatbot-architecture.png)
-*Reverse Proxy → Open WebUI → Ollama — clean & scalable.*
-
-### Setup Script
-
-![Setup Script](screenshots/setup-script.png)
-*Einmaliges Setup mit dem automatisierten Script — GPU-Erkennung inklusive.*
-
----
-
-## Warum selbstgehostet?
-
-| Vorteil | Beschreibung |
-|---------|-------------|
-| DSGVO-konform | Keine Daten verlassen deinen Server |
-| Keine monatlichen Kosten | Einmalige Hardware, kein SaaS-Abo |
-| Volle Kontrolle | Modell, Prompts, Daten — alles in deiner Hand |
-| Offline verfügbar | Auch ohne Internetverbindung nutzbar |
-| Datenschutz | Kein Teilen mit Drittanbietern |
-
----
-
-## 🚀 Schnellstart
-
-### Voraussetzungen
-
-| Komponente | Version | Zweck |
-|---|---|---|
-| Docker & Docker Compose | 20.10+ / 2.0+ | Container-Stack |
-| RAM | 8 GB+ | LLM-Inferenz (min. für 8B Modelle) |
-| GPU (optional) | NVIDIA 4+ GB VRAM | Beschleunigte Inferenz |
-
-### Installation
-
-```bash
-git clone https://github.com/ceeceeceecee/self-hosted-ai-chatbot.git
-cd self-hosted-ai-chatbot
-
-# Konfiguration & Start
-cp .env.example .env && docker compose up -d
-```
-
-### Erste Schritte
-
-1. **Open WebUI öffnen:** [http://localhost:3000](http://localhost:3000) und Account anlegen
-2. **Modell auswählen** — Standard: Llama 3.1 8B (8 GB RAM)
-3. **GPU-Variante (optional):** `docker compose -f docker-compose.gpu.yml up -d`
-4. **Chat starten** und Modell bei Bedarf in den Einstellungen wechseln
-
----
-
-## Unterstützte Modelle
-
-| Modell | RAM | Use Case |
-|--------|-----|----------|
-| Llama 3.1 8B | 8 GB | Allround, allgemeine Fragen |
-| Mistral 7B | 8 GB | Schnell, effizient |
-| Gemma 2 9B | 8 GB | Stark bei Logik |
-| Llama 3.1 70B | 48 GB | Komplexe Aufgaben, lange Texte |
-| Mixtral 8x7B | 48 GB | MoE-Architektur, vielseitig |
-| Phi-3 Mini | 4 GB | Leichtgewichtig, schwache Hardware |
-
-Siehe [docs/models.md](docs/models.md) für Details.
-
----
-
-## Architektur
-
-```
-+------------------+     +------------------+     +------------------+
-|   Nginx (80/443) | --> |   Open WebUI     | --> |     Ollama       |
-|   Reverse Proxy  |     |   Chat-Oberfläche |     |   LLM Runtime    |
-+------------------+     +------------------+     +------------------+
-                                  |
-                           +-------------+
-                           |    Redis    |
-                           |   (Cache)   |
-                           +-------------+
-```
-
----
+- 100% self-hosted, kein Cloud-Bezug
+- Open WebUI als Chat-Interface
+- Ollama als LLM-Runtime
+- Nginx Reverse Proxy mit SSL
+- GPU-Unterstützung (optional)
+- Einfache Setup-Scripte
 
 ## Tech Stack
 
-- **Ollama** — LLM Runtime (lokal)
-- **Open WebUI** — Chat-Interface (ChatGPT-Alternative)
-- **Nginx** — Reverse Proxy & SSL
-- **Redis** — Session-Caching
-- **Docker Compose** — Deployment
+| Tech | Zweck |
+|------|-------|
+| Ollama | LLM-Runtime |
+| Open WebUI | Chat-Interface |
+| Nginx | Reverse Proxy |
+| Docker Compose | Orchestrierung |
 
----
+## Quick Start
 
-## Roadmap
+```bash
+docker compose up -d
+# Oeffne http://localhost:3000
+```
 
-- [ ] RAG mit lokalen Dokumenten
-- [ ] LDAP / SSO Integration
-- [ ] Multi-User mit Rollen
-- [ ] Auto-Scaling mit GPU-Scheduling
+## Screenshots
+
+**System-Architektur**
+
+<img src="screenshots/architecture.png" alt="System-Architektur" width="800">
+
+**Docker Container Übersicht**
+
+<img src="screenshots/docker-overview.png" alt="Docker Container Übersicht" width="800">
+
+**Projekt-Übersicht**
+
+<img src="screenshots/repo-overview.png" alt="Projekt-Übersicht" width="800">
+
+**Setup-Script Ausführung**
+
+<img src="screenshots/setup-script.png" alt="Setup-Script Ausführung" width="800">
+
+**Chatbot Architektur-Detail**
+
+<img src="screenshots/chatbot-architecture.png" alt="Chatbot Architektur-Detail" width="800">
 
 ---
 
 ## Contributing
 
-1. Fork → Feature-Branch → Commit → Push → Pull Request
+Beiträge sind willkommen! Bitte erstelle einen Issue oder Pull Request.
 
----
+## License
 
+MIT License — siehe [LICENSE](LICENSE).
 
-## 👤 Autor
-
-**Cela** — Freelancer für digitale Verwaltungslösungen
-## Lizenz
-
-[MIT](LICENSE) — frei nutzbar.
-
-## Author
-
-[ceeceeceecee](https://github.com/ceeceeceecee)
-
-## Weitere Projekte
-
-- [n8n Business Automation](https://github.com/ceeceeceecee/n8n-business-automation) — Workflow-Templates
-- [AI Document Analyzer](https://github.com/ceeceeceecee/ai-document-analyzer) — Dokumentenanalyse
+<p align="center">
+<a href="https://github.com/ceeceeceecee">ColeTrading</a> &bull; DSGVO-konform &bull; Self-Hosted &bull; Open Source
+</p>
